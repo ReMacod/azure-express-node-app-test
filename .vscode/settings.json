@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/193f55e9-631e-4c12-aa61-2255eac0cc64/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/azure-express-node-app-test",
+  "appService.deploySubpath": "node-app"
+}
