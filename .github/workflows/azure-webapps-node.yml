@@ -57,3 +57,13 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+
+      - name: Generate deployment URL with branch name
+        run: |
+          export BRANCH_NAME=$(Build.SourceBranchName)
+          export DEPLOYMENT_URL="https://yourapp-${BRANCH_NAME}.azurewebsites.net"
+          echo "Deploying to $DEPLOYMENT_URL"
+          # Use $DEPLOYMENT_URL variable in your deployment process
+          # Example command to deploy your application
+          # deploy-command $DEPLOYMENT_URL
+
